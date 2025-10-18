@@ -1,543 +1,227 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Karifa Camara | Développeur Web Fullstack</title>
-    <meta name="description" content="Portfolio professionnel de Karifa Camara, développeur web fullstack spécialisé en JavaScript et frameworks modernes.">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="./assets/fontawesome-free-6.7.2-web/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Style personnalisé -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Karifa Camara | Développeur Web Fullstack</title>
+  <meta name="description" content="Portfolio professionnel de Karifa Camara, développeur web fullstack spécialisé en JavaScript, Angular, Django et Bootstrap.">
+  <link rel="icon" type="image/png" href="./assets/Image/logocmdev.jpg">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./assets/fontawesome-free-6.7.2-web/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar" id="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <span class="brand-icon">
-                        <img src="./assets/Image/logo.png" alt="Logo CAMDEV" class="rounded-circle">
-                    </span>
-                    <span class="brand-text">CAMDEV</span>
-                </a>
-                <button class="navbar-toggler" id="navbarToggler" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="navbar-menu" id="navbarMenu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link " href="#moi"><i class="fas fa-home"></i> Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experiences"><i class="fas fa-briefcase"></i> Expériences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#formations"><i class="fas fa-graduation-cap"></i> Formations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#competences"><i class="fas fa-laptop-code"></i> Compétences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-                        </li>
-                    </ul>
-                    <div class="profile-container">
-                        <img src="./assets/Image/imageskk.png" alt="Photo de profil" class="profile-img">
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Section Accueil -->
-    <section id="moi" class="mois-section">
-        <div class="container">
-            <div class="mois-content">
-                <div class="mois-text">
-                    <h1 class="mois-title">Karifa Camara</h1>
-                    <h2 class="mois-subtitle">Développeur Web Fullstack</h2>
-                    <div class="mois-description">
-                        <p>Passionné par le développement web et les nouvelles technologies, je crée des solutions innovantes et performantes.</p>
-                    </div>
-                    <div class="mois-buttons">
-                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Contactez-moi</a>
-                        <a href="./assets/Image/CV_ Karifa.pdf" target="_blank" class="btn btn-secondary" id="downloadCV"><i class="fas fa-download"></i> Télécharger CV</a>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/?original_referer=" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://stackoverflow.com/" aria-label="stackoverflow" target="_blank"><i class="fab fa-stack-overflow"></i></i></a>
-                        <a href="mailto:camarakarifa69@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="mois-image">
-                    <img src="./assets/Image/imageskk.png" alt="Photo de profil" class="mois-img" loading="lazy">
-                </div>
-            </div>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#moi">
+          <span class="brand-icon">
+            <img src="./assets/Image/logocmdev.jpg" alt="Logo CAMDEV" class="rounded-circle">
+          </span>
+          <span class="brand-text">CAMDEV</span>
+        </a>
+        <button class="navbar-toggler" id="navbarToggler" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="navbar-menu" id="navbarMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#moi"><i class="fas fa-home"></i> Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experiences"><i class="fas fa-briefcase"></i> Expériences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#formations"><i class="fas fa-graduation-cap"></i> Formations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#competences"><i class="fas fa-laptop-code"></i> Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projets"><i class="fas fa-project-diagram"></i> Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+          <div class="profile-container">
+            <img src="./assets/Image/profile.png" alt="Photo de profil" class="profile-img">
+          </div>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Section Expériences -->
-    <section id="experiences" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Mes Expériences Professionnelles</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2022 - 2023</div>
-                    <div class="timeline-content">
-                        <h3>Développeur Frontend</h3>
-                        <h4>Création de mon portfolio et ma page galerie personnel</h4>
-                        <ul>
-                            <li>Conception du site basée sur une solution Html/css, Bootstrap et JavaScript</li>
-                        </ul>
-                        <div class="badges">
-                            <span class="badge">Html5/css</span>
-                            <span class="badge">Bootstrap</span>
-                            <span class="badge">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - 2024</div>
-                    <div class="timeline-content">
-                        <h3>Développeur Frontend</h3>
-                        <h4>Gestion de Département Genie Informatique</h4>
-                        <ul>
-                            <li>Conception et architecture de l'application basée sur une solution Angular</li>
-                            <li>Développement de composants Angular</li>
-                            <li>Création de services pour communiquer avec les API</li>
-                            <li>Relations avec les clients</li>
-                        </ul>
-                        <div class="badges">
-                            <span class="badge">Html5/css</span>
-                            <span class="badge">Bootstrap</span>
-                            <span class="badge">Angular</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 - 2025</div>
-                    <div class="timeline-content">
-                        <h3>Développeur Fullstack</h3>
-                        <h4>Mise en place d'une plateforme web pour Gestion de la DPE de Mamou</h4>
-                        <ul>
-                            <li>création du Frontend en equipe</li>
-                            <li>Mise en place de api rest</li>
-                            <li>Mettre en relation entre frontend et le backend</li>
-                        </ul>
-                        <div class="badges">
-                            <span class="badge">Html5/css</span>
-                            <span class="badge">Bootstrap</span>
-                            <span class="badge">Angular</span>
-                            <span class="badge">Djangorestframework</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <h3>Développeur fullstack</h3>
-                        <h4>Mise en place d'une plateforme web pour la gestion des ordre mission des enseignant de IST de Mamou</h4>
-                        <ul>
-                            <li>Developpé le Frontend et le Bacekend</li>
-                            <li>Webdesign (conception de maquettes web)</li>
-                            <li>Intégrations de openIA</li>
-                            <li>Relations avec les clients</li>
-                        </ul>
-                        <div class="badges">
-                            <span class="badge">Html5/css</span>
-                            <span class="badge">Bootstrap</span>
-                            <span class="badge">Angular</span>
-                            <span class="badge">Djangorestframework</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Section Accueil -->
+  <section id="moi" class="mois-section">
+    <div class="container">
+      <div class="mois-content">
+        <div class="mois-text">
+          <h1 class="mois-title">Karifa Camara</h1>
+          <h2 class="mois-subtitle">Développeur Web Fullstack</h2>
+          <p class="mois-description">Passionné par le développement web et les nouvelles technologies, je crée des solutions innovantes et performantes.</p>
+          <div class="mois-buttons">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Contactez-moi</a>
+            <a href="./assets/Image/Karifa_CV.pdf" target="_blank" class="btn btn-secondary"><i class="fas fa-download"></i> Télécharger CV</a>
+          </div>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://stackoverflow.com/" aria-label="StackOverflow" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+            <a href="mailto:camarakarifa69@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
-    </section>
-
-    <!-- Section Formations -->
-    <section id="formations" class="section">
-        <div class="container">
-            <h2 class="section-title">Mes Formations</h2>
-            <div class="grid-container">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-header">
-                            <h3 class="card-title">Formation D-CLIC</h3>
-                            <span class="badge">2025 (En cours)</span>
-                        </div>
-                        <h4 class="card-subtitle">Développement Web Fullstack JavaScript</h4>
-                        <p class="card-text">SIMPLON Guinée</p>
-                        <div class="skills">
-                            <span class="skill-badge">JavaScript</span>
-                            <span class="skill-badge">React</span>
-                            <span class="skill-badge">Node.js</span>
-                            <span class="skill-badge">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-header">
-                            <h3 class="card-title">Formation WordPress</h3>
-                            <span class="badge">24-26/ Juin/ 2025</span>
-                        </div>
-                        <h4 class="card-subtitle">Création de sites avec WordPress</h4>
-                        <p class="card-text">Orange Digital Center</p>
-                        <div class="skills">
-                            <span class="skill-badge">WordPress</span>
-                            <span class="skill-badge">Elementor</span>
-                            <span class="skill-badge">SEO</span>
-                        </div>
-                    </div>
-                </div>
-                                <div class="card">
-                    <div class="card-body">
-                        <div class="card-header">
-                            <h3 class="card-title">Formation en mobile</h3>
-                            <span class="badge">2024</span>
-                        </div>
-                        <h4 class="card-subtitle">Création d'application mobile avec flutter</h4>
-                        <p class="card-text">Orange digital center</p>
-                        <div class="skills">
-                            <span class="skill-badge">Programmation dart</span>
-                            <span class="skill-badge">Flutter</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-header">
-                            <h3 class="card-title">Licence 4 Genie Informatique</h3>
-                            <span class="badge">2021-2025</span>
-                        </div>
-                        <h4 class="card-subtitle">Spécialité Développeur Web</h4>
-                        <p class="card-text">Institut superieur de technologie de Mamou</p>
-                        <div class="skills">
-                            <span class="skill-badge">Algorithmique</span>
-                            <span class="skill-badge">Bases de données</span>
-                            <span class="skill-badge">Développement Web</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-header">
-                            <h3 class="card-title">Baccalauréat Unique</h3>
-                            <span class="badge">2020-2021</span>
-                        </div>
-                        <p class="card-text">Option Sciences Mathématiques</p>
-                        <div class="skills">
-                            <span class="skill-badge">Mathématiques</span>
-                            <span class="skill-badge">Physique</span>
-                            <span class="skill-badge">Informatique</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="mois-image">
+          <img src="./assets/Image/profile.png" alt="Photo de Karifa Camara" class="mois-img" loading="lazy">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Section Compétences -->
-    <section id="competences" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Mes Compétences</h2>
-            <div class="skills-container">
-                <div class="skills-column">
-                    <h3 class="skills-title">Compétences Techniques</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>HTML5</span>
-                            <span>97%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill html" style="width: 97%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>CSS3</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill css" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>JavaScript/Typescript</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill js" style="width: 60%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>PYTHON</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill python" style="width: 50%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>PHP</span>
-                            <span>40%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill php" style="width: 40%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-column">
-                    <h3 class="skills-title">Frameworks & Outils</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Angular</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill angular" style="width: 65%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Bootstrap/tailwind</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill bootstrap" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>React js</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill reactjs" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Djangorestframework</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill django" style="width: 50%"></div>
-                        </div>
-                    </div>
+  <!-- Section Expériences -->
+  <section id="experiences" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Mes Expériences Professionnelles</h2>
+      <div class="timeline" id="experiences-container"></div>
+    </div>
+  </section>
 
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Git/GitHub</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill git" style="width: 90%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-column">
-                    <h3 class="skills-title">Design UX/UI</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Figma</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill figma" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Adobe Photoshop</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill photoshop" style="width: 65%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Adobe Illustrator</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill illustrator" style="width: 60%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Canvas</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill canvas" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Gama</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill gama" style="width: 50%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="qualities-container">
-                <div class="qualities-card">
-                    <div class="icon-circle">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>Langues</h3>
-                    <ul>
-                        <li>Français - Courant</li>
-                        <li>Anglais - Intermédiaire</li>
-                    </ul>
-                </div>
-                <div class="qualities-card">
-                    <div class="icon-circle">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Centres d'intérêt</h3>
-                    <ul>
-                        <li>Cinéma</li>
-                        <li>Lecture</li>
-                        <li>Musique</li>
-                        <li>Nouvelles technologies</li>
-                        <li>Design graphique</li>
-                    </ul>
-                </div>
-                <div class="qualities-card">
-                    <div class="icon-circle">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Qualités</h3>
-                    <ul>
-                        <li>Rigueur</li>
-                        <li>Autonomie</li>
-                        <li>Travail en équipe</li>
-                        <li>Capacité d'écoute</li>
-                        <li>Sens du design</li>
-                    </ul>
-                </div>
-            </div>
+  <!-- Section Formations -->
+  <section id="formations" class="section">
+    <div class="container">
+      <h2 class="section-title">Mes Formations</h2>
+      <div class="grid-container" id="formations-container"></div>
+    </div>
+  </section>
+
+  <!-- Section Projets -->
+  <section id="projets" class="section">
+    <div class="container">
+      <h2 class="section-title">Mes Projets</h2>
+      <div class="grid-container" id="projets-container"></div>
+    </div>
+  </section>
+  <!-- Section Compétences -->
+  <section id="competences" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Mes Compétences</h2>
+      <div class="skills-container" id="competences-container"></div>
+      <div class="qualities-container">
+        <div class="qualities-card">
+          <div class="icon-circle"><i class="fas fa-language"></i></div>
+          <h3>Langues</h3>
+          <ul>
+            <li>Français - Courant</li>
+            <li>Anglais - Intermédiaire</li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Contactez-moi</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Informations de contact</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>camarakarifa69@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Téléphone</h4>
-                            <p>+2024 621 33 77 01</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Adresse</h4>
-                            <p>Mamou de Guinée Conakry</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Envoyez-moi un message</h3>
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nom">Nom</label>
-                                <input type="text" id="nom" required>
-                                <div class="input-invalid">Veuillez entrer votre nom.</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="prenom">Prénom</label>
-                                <input type="text" id="prenom" required>
-                                <div class="input-invalid">Veuillez entrer votre prénom.</div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required>
-                            <div class="input-invalid">Veuillez entrer une adresse email valide.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="objet">Objet</label>
-                            <input type="text" id="objet" required>
-                            <div class="input-invalid">Veuillez entrer un objet.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="3" required></textarea>
-                            <div class="input-invalid">Veuillez entrer votre message.</div>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="btnContact">
-                            Envoyer le message <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
+        <div class="qualities-card">
+          <div class="icon-circle"><i class="fas fa-heart"></i></div>
+          <h3>Centres d'intérêt</h3>
+          <ul>
+            <li>Cinéma</li>
+            <li>Lecture</li>
+            <li>Musique</li>
+            <li>Nouvelles technologies</li>
+            <li>Design graphique</li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p style="padding-top: 50px;">&copy; <span id="current-year"></span> CAMDEV. Tous droits réservés.</p>
-            </div>
-            <div class="footer-content " >
-                <a class="lien-footer" href="#moi"> Accueil</a>
-                     
-                <a class="lien-footer" href="#experiences"> Expériences</a>
-                      
-                <a class="lien-footer" href="#formations"> Formations</a>
-                      
-                <a class="lien-footer" href="#competences"> Compétences</a>
-                  
-                <a class="lien-footer" href="#contact"> Contact</a>
-                        
-            </div>
-            <div class="footer-content">
-                        <div class="footer-social">
-
-                            <a href="https://www.linkedin.com/?original_referer=" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://stackoverflow.com/" aria-label="stackoverflow" target="_blank"><i class="fab fa-stack-overflow"></i></i></a>
-                            <a href="mailto:camarakarifa69@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        
-                        </div>
-            </div>
+        <div class="qualities-card">
+          <div class="icon-circle"><i class="fas fa-star"></i></div>
+          <h3>Qualités</h3>
+          <ul>
+            <li>Rigueur</li>
+            <li>Autonomie</li>
+            <li>Travail en équipe</li>
+            <li>Capacité d'écoute</li>
+            <li>Sens du design</li>
+          </ul>
         </div>
-    </footer>
-    <script src="./assets/script.js"></script>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Contact -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Contactez-moi</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Informations de contact</h3>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div><h4>Email</h4><p>camarakarifa69@gmail.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div><h4>Téléphone</h4><p>+224 621 33 77 01</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h4>Adresse</h4><p>Mamou, Guinée</p></div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Envoyez-moi un message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" required>
+                <div class="input-invalid">Veuillez entrer votre nom.</div>
+              </div>
+              <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" required>
+                <div class="input-invalid">Veuillez entrer votre prénom.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+              <div class="input-invalid">Veuillez entrer une adresse email valide.</div>
+            </div>
+            <div class="form-group">
+              <label for="objet">Objet</label>
+              <input type="text" id="objet" required>
+              <div class="input-invalid">Veuillez entrer un objet.</div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="3" required></textarea>
+              <div class="input-invalid">Veuillez entrer votre message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnContact">
+              Envoyer le message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> CAMDEV. Tous droits réservés.</p>
+      </div>
+      <div class="footer-content">
+        <a class="lien-footer" href="#moi">Accueil</a>
+        <a class="lien-footer" href="#experiences">Expériences</a>
+        <a class="lien-footer" href="#formations">Formations</a>
+        <a class="lien-footer" href="#competences">Compétences</a>
+        <a class="lien-footer" href="#projets">Projets</a>
+        <a class="lien-footer" href="#contact">Contact</a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://stackoverflow.com/" aria-label="StackOverflow" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+          <a href="mailto:camarakarifa69@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="./assets/script.js"></script>
 </body>
 </html>
