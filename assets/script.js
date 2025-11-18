@@ -1,6 +1,6 @@
 // === Script principal du portfolio ===
 document.addEventListener("DOMContentLoaded", function () {
-  // 🕓 Mise à jour automatique de l’année dans le footer
+  // 🕓 Mise à jour automatique de l'année dans le footer
   const date = new Date();
   const yearEl = document.querySelector("#current-year");
   if (yearEl) yearEl.textContent = date.getFullYear();
@@ -11,24 +11,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (navbarToggler && navbarMenu) {
     navbarToggler.addEventListener("click", function () {
-      navbarMenu.classList.toggle("active");
+      navbarMenu.classList.toggle("hidden");
+      navbarMenu.classList.toggle("flex");
+      navbarMenu.classList.toggle("md:flex");
+
+      // Pour mobile, positionner le menu correctement
+      if (!navbarMenu.classList.contains("hidden")) {
+        navbarMenu.classList.add(
+          "fixed",
+          "top-16",
+          "left-0",
+          "w-full",
+          "h-[calc(100vh-4rem)]",
+          "bg-dark",
+          "flex-col",
+          "p-5",
+          "overflow-y-auto"
+        );
+      } else {
+        navbarMenu.classList.remove(
+          "fixed",
+          "top-16",
+          "left-0",
+          "w-full",
+          "h-[calc(100vh-4rem)]",
+          "bg-dark",
+          "flex-col",
+          "p-5",
+          "overflow-y-auto"
+        );
+      }
     });
 
     // Fermer le menu quand un lien est cliqué
     const navLinks = document.querySelectorAll(".nav-link");
     navLinks.forEach((link) => {
       link.addEventListener("click", function () {
-        navbarMenu.classList.remove("active");
+        if (window.innerWidth < 768) {
+          navbarMenu.classList.add("hidden");
+          navbarMenu.classList.remove("flex");
+          navbarMenu.classList.remove(
+            "fixed",
+            "top-16",
+            "left-0",
+            "w-full",
+            "h-[calc(100vh-4rem)]",
+            "bg-dark",
+            "flex-col",
+            "p-5",
+            "overflow-y-auto"
+          );
+        }
       });
     });
   }
 
   // === 🎨 Changement de style de la navbar au scroll ===
   window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("navbar");
+    const navbar = document.querySelector(".navbar");
     if (!navbar) return;
-    if (window.scrollY > 50) navbar.classList.add("scrolled");
-    else navbar.classList.remove("scrolled");
+    if (window.scrollY > 50) {
+      navbar.classList.add("py-3", "bg-dark/95");
+      navbar.classList.remove("py-4");
+    } else {
+      navbar.classList.remove("py-3", "bg-dark/95");
+      navbar.classList.add("py-4");
+    }
   });
 
   // === ✉️ Validation du formulaire de contact ===
@@ -41,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const fields = ["nom", "prenom", "email", "objet", "message"];
       document.querySelectorAll(".input-invalid").forEach((el) => {
-        el.style.display = "none";
+        el.classList.add("hidden");
       });
 
       fields.forEach((id) => {
@@ -53,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
           (id === "email" &&
             !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim()))
         ) {
-          field.nextElementSibling.style.display = "block";
+          field.nextElementSibling.classList.remove("hidden");
           isValid = false;
         }
       });
@@ -68,11 +116,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // === 🧱 SECTION EXPÉRIENCES ===
   const experiences = [
     {
-      date: "Octobre 2025 – Aujourd’hui",
+      date: "Octobre 2025 – Aujourd'hui",
       titre: "Développeur Fullstack",
       sousTitre: "Plateforme de messagerie interne",
       description: [
-        "Développement d’une application de messagerie entre les acteurs d'un établissement.",
+        "Développement d'une application de messagerie entre les acteurs d'un établissement.",
         "Mise en place du backend Node.js/Express et base de données MongoDB.",
         "Intégration du frontend React avec authentification JWT et interface réactive.",
       ],
@@ -90,9 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
       titre: "Développeur Fullstack",
       sousTitre: "Plateforme de suivi vaccinal (Projet D-CLIC)",
       description: [
-        "Conception et développement d’une application web pour le suivi des vaccinations.",
+        "Conception et développement d'une application web pour le suivi des vaccinations.",
         "Travail en équipe selon la méthodologie Agile (MERN Stack).",
-        "Création d’une interface réactive avec React et TailwindCSS.",
+        "Création d'une interface réactive avec React et TailwindCSS.",
       ],
       technologies: ["React", "Node.js", "MongoDB", "TailwindCSS"],
     },
@@ -101,9 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
       titre: "Développeur Mobile Flutter",
       sousTitre: "Application Code-USSD",
       description: [
-        "Développement en équipe d’une application mobile Android avec Flutter et Dart.",
-        "Mise en place d’un système d’interaction USSD pour accéder à différents services.",
-        "Création d’une interface fluide et responsive adaptée aux terminaux mobiles.",
+        "Développement en équipe d'une application mobile Android avec Flutter et Dart.",
+        "Mise en place d'un système d'interaction USSD pour accéder à différents services.",
+        "Création d'une interface fluide et responsive adaptée aux terminaux mobiles.",
       ],
       technologies: ["Flutter", "Dart"],
     },
@@ -112,18 +160,18 @@ document.addEventListener("DOMContentLoaded", function () {
       titre: "Développeur Frontend",
       sousTitre: "Gestion de la DPE de Mamou",
       description: [
-        "Conception et développement de l’interface utilisateur avec Angular.",
-        "Mise en place d’un tableau de bord dynamique et responsive pour la gestion des données.",
-        "Optimisation de l’expérience utilisateur et intégration des API côté frontend.",
+        "Conception et développement de l'interface utilisateur avec Angular.",
+        "Mise en place d'un tableau de bord dynamique et responsive pour la gestion des données.",
+        "Optimisation de l'expérience utilisateur et intégration des API côté frontend.",
       ],
       technologies: ["Angular", "Bootstrap"],
     },
     {
-      date: "Décembre 2024 – Aujourd’hui",
+      date: "Décembre 2024 – Aujourd'hui",
       titre: "Développeur",
       sousTitre: "Portfolio personnel",
       description: [
-        "Création d’un site personnel avec HTML, CSS et JavaScript.",
+        "Création d'un site personnel avec HTML, CSS et JavaScript.",
         "Structure responsive et animations modernes.",
       ],
       technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
@@ -134,34 +182,49 @@ document.addEventListener("DOMContentLoaded", function () {
   if (experiencesContainer) {
     experiences.forEach((exp) => {
       const timelineItem = document.createElement("div");
-      timelineItem.className = "timeline-item";
+      timelineItem.className =
+        "timeline-item relative mb-12 flex items-center opacity-0 translate-y-5 transition-opacity duration-500 transition-transform duration-500";
 
       const descriptionHTML = exp.description
-        .map((desc) => `<li>${desc}</li>`)
+        .map(
+          (desc) => `<li class="mb-2 relative pl-5 text-gray-600">${desc}</li>`
+        )
         .join("");
       const badgesHTML = exp.technologies
-        .map((tech) => `<span class="badge">${tech}</span>`)
+        .map(
+          (tech) =>
+            `<span class="badge bg-primary text-white py-1 px-3 rounded-full text-sm font-medium">${tech}</span>`
+        )
         .join("");
 
       timelineItem.innerHTML = `
-        <div class="timeline-date">${exp.date}</div>
-        <div class="timeline-content">
-          <h3>${exp.titre}</h3>
-          <h4>${exp.sousTitre}</h4>
-          <ul>${descriptionHTML}</ul>
-          <div class="badges">${badgesHTML}</div>
+        <div class="timeline-date absolute top-0 left-1/2 transform -translate-x-1/2 bg-secondary text-white py-2 px-4 font-semibold rounded-full z-10 text-sm">${exp.date}</div>
+        <div class="timeline-content w-5/12 p-6 bg-white rounded-lg shadow-md ml-auto relative border-t-4 border-primary">
+          <h3 class="text-xl mb-2 text-dark font-roboto-slab">${exp.titre}</h3>
+          <h4 class="text-lg mb-4 text-primary font-medium">${exp.sousTitre}</h4>
+          <ul class="mb-4">${descriptionHTML}</ul>
+          <div class="badges flex flex-wrap gap-2 mt-4">${badgesHTML}</div>
         </div>
       `;
 
       experiencesContainer.appendChild(timelineItem);
     });
+
+    // Ajouter la ligne de timeline
+    experiencesContainer.insertAdjacentHTML(
+      "beforebegin",
+      '<div class="timeline-line absolute top-0 left-1/2 w-0.5 h-full bg-primary transform -translate-x-1/2"></div>'
+    );
   }
 
   // === 🎞️ Animation de la timeline ===
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
+        if (entry.isIntersecting) {
+          entry.target.classList.add("opacity-100", "translate-y-0");
+          entry.target.classList.remove("opacity-0", "translate-y-5");
+        }
       });
     },
     { threshold: 0.2 }
@@ -224,25 +287,33 @@ document.addEventListener("DOMContentLoaded", function () {
   if (formationsContainer) {
     formations.forEach((formation) => {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className =
+        "card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 border-t-4 border-primary hover:-translate-y-1 hover:shadow-lg";
 
       const skillsHTML = formation.competences
-        .map((comp) => `<span class="skill-badge">${comp}</span>`)
+        .map(
+          (comp) =>
+            `<span class="skill-badge bg-cyan-50 text-primary py-1 px-3 rounded text-sm border border-cyan-200">${comp}</span>`
+        )
         .join("");
 
       card.innerHTML = `
-        <div class="card-body">
-          <div class="card-header">
-            <h3 class="card-title">${formation.titre}</h3>
-            <span class="badge">${formation.date}</span>
+        <div class="card-body p-6">
+          <div class="card-header flex justify-between items-center mb-4">
+            <h3 class="card-title text-lg font-roboto-slab text-dark">${
+              formation.titre
+            }</h3>
+            <span class="badge bg-secondary text-white py-1 px-3 rounded-full text-xs">${
+              formation.date
+            }</span>
           </div>
           ${
             formation.sousTitre
-              ? `<h4 class="card-subtitle">${formation.sousTitre}</h4>`
+              ? `<h4 class="card-subtitle text-primary mb-4 font-medium">${formation.sousTitre}</h4>`
               : ""
           }
-          <p class="card-text">${formation.lieu}</p>
-          <div class="skills">${skillsHTML}</div>
+          <p class="card-text text-gray-600 mb-4">${formation.lieu}</p>
+          <div class="skills flex flex-wrap gap-2">${skillsHTML}</div>
         </div>
       `;
 
@@ -279,18 +350,18 @@ document.addEventListener("DOMContentLoaded", function () {
   if (competencesContainer) {
     const createSkillsColumn = (title, items) => {
       const column = document.createElement("div");
-      column.className = "skills-column";
-      column.innerHTML = `<h3 class="skills-title">${title}</h3>`;
+      column.className = "skills-column flex-1 min-w-[300px]";
+      column.innerHTML = `<h3 class="skills-title text-center mb-8 text-xl font-roboto-slab text-dark relative pb-2">${title}</h3>`;
       items.forEach((comp) => {
         const skillItem = document.createElement("div");
-        skillItem.className = "skill-item";
+        skillItem.className = "skill-item mb-5";
         skillItem.innerHTML = `
-          <div class="skill-info">
-            <span>${comp.nom}</span>
-            <span>${comp.niveau}%</span>
+          <div class="skill-info flex justify-between mb-2 text-sm">
+            <span class="text-dark font-medium">${comp.nom}</span>
+            <span class="text-primary">${comp.niveau}%</span>
           </div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: ${comp.niveau}%"></div>
+          <div class="progress-bar h-2.5 bg-gray-200 rounded overflow-hidden">
+            <div class="progress-fill h-full rounded bg-gradient-to-r from-primary to-secondary transition-all duration-1500 ease-in-out" style="width: ${comp.niveau}%"></div>
           </div>
         `;
         column.appendChild(skillItem);
@@ -307,9 +378,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const projets = [
     {
       titre: "Plateforme de messagerie interne",
-      date: "Octobre 2025 – Aujourd’hui",
+      date: "Octobre 2025 – Aujourd'hui",
       description:
-        "Application web permettant la communication interne entre étudiants et enseignants d’un établissement.",
+        "Application web permettant la communication interne entre étudiants et enseignants d'un établissement.",
       technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
       lien: "https://github.com/CAMARA62133/frontendSGM",
     },
@@ -325,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function () {
       titre: "Application mobile Code-USSD",
       date: "Avril 2024",
       description:
-        "Application mobile Android développée avec Flutter/Dart, permettant l’accès rapide à divers services via des codes USSD.",
+        "Application mobile Android développée avec Flutter/Dart, permettant l'accès rapide à divers services via des codes USSD.",
       technologies: ["Flutter", "Dart"],
       lien: "https://github.com/MaximeKPOGHOMOU/Code-ussd",
     },
@@ -339,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       titre: "Portfolio personnel",
-      date: "Décembre 2024 – Aujourd’hui",
+      date: "Décembre 2024 – Aujourd'hui",
       description:
         "Mon site web personnel présentant mes projets et mes compétences en développement web.",
       technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
@@ -351,23 +422,27 @@ document.addEventListener("DOMContentLoaded", function () {
   if (projetsContainer) {
     projets.forEach((projet) => {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className =
+        "card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 border-t-4 border-primary hover:-translate-y-1 hover:shadow-lg";
 
       const skillsHTML = projet.technologies
-        .map((tech) => `<span class="skill-badge">${tech}</span>`)
+        .map(
+          (tech) =>
+            `<span class="skill-badge bg-cyan-50 text-primary py-1 px-3 rounded text-sm border border-cyan-200">${tech}</span>`
+        )
         .join("");
 
       card.innerHTML = `
-      <div class="card-body">
-        <div class="card-header">
-          <h3 class="card-title">${projet.titre}</h3>
-          <span class="badge">${projet.date}</span>
+      <div class="card-body p-6">
+        <div class="card-header flex justify-between items-center mb-4">
+          <h3 class="card-title text-lg font-roboto-slab text-dark">${projet.titre}</h3>
+          <span class="badge bg-secondary text-white py-1 px-3 rounded-full text-xs">${projet.date}</span>
         </div>
-        <p class="card-text">${projet.description}</p>
-        <div class="skills">${skillsHTML}</div>
-        <div style="margin-top: 15px;">
-          <a href="${projet.lien}" class="btn btn-primary" target="_blank">
-            <i class="fab fa-github"></i> Voir sur GitHub
+        <p class="card-text text-gray-600 mb-4">${projet.description}</p>
+        <div class="skills flex flex-wrap gap-2 mb-4">${skillsHTML}</div>
+        <div class="mt-4">
+          <a href="${projet.lien}" class="btn btn-primary flex items-center justify-center py-2 px-4 bg-primary text-white rounded font-medium transition-all duration-300 hover:bg-cyan-600" target="_blank">
+            <i class="fab fa-github mr-2"></i> Voir sur GitHub
           </a>
         </div>
       </div>
