@@ -102,6 +102,7 @@
           <li><a href="#experience" class="nav-link">Expérience</a></li>
           <li><a href="#projects" class="nav-link">Projets</a></li>
           <li><a href="#skills" class="nav-link">Compétences</a></li>
+          <li><a href="#formation" class="nav-link">Formation</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -173,14 +174,14 @@
                 <i class="fab fa-linkedin"></i>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/CAMARA62133"
                 target="_blank"
                 class="w-12 h-12 bg-gray-800 hover:bg-primary/20 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <i class="fab fa-github"></i>
               </a>
               <a
-                href="mailto:camarakarifa69@gmail.com"
+                href="mailto:camarakarifadev@gmail.com"
                 class="w-12 h-12 bg-gray-800 hover:bg-primary/20 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <i class="fas fa-envelope"></i>
@@ -263,7 +264,7 @@
     <section id="experience" class="py-20 bg-darker">
       <div class="container mx-auto px-4">
         <h2 class="section-title">Expérience</h2>
-        <div class="space-y-8 mt-16" id="experiencesContainer">
+        <div class="mt-16 pl-6 md:pl-10 relative" id="experiencesContainer">
           <!-- Experiences dynamiquement générées -->
         </div>
       </div>
@@ -286,62 +287,90 @@
     <section id="skills" class="py-20 bg-darker">
       <div class="container mx-auto px-4">
         <h2 class="section-title">Compétences</h2>
-        <div
-          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"
-          id="skillsContainer"
-        >
+        
+        <!-- Nouveau conteneur pour les compétences -->
+        <div class="mt-16" id="skillsContainer">
           <!-- Skills dynamiquement générées -->
         </div>
 
-        <div
-          class="grid md:grid-cols-3 gap-6 mt-16 pt-16 border-t border-gray-800"
-        >
+        <div class="grid md:grid-cols-3 gap-6 mt-16 pt-16 border-t border-gray-800">
+          <!-- Langues -->
           <div class="card-hover p-6 rounded-xl text-center">
-            <div
-              class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
+            <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="fas fa-language text-primary text-xl"></i>
             </div>
             <h3 class="text-lg font-playfair mb-3">Langues</h3>
-            <ul class="space-y-2 text-gray-400 text-sm">
-              <li>🇫🇷 Français - Courant</li>
-              <li>🇬🇧 Anglais - Intermédiaire</li>
+            <ul class="space-y-3 text-gray-400 text-sm text-left inline-block">
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-primary/70 text-xs"></i>
+                Français - Courant
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-primary/70 text-xs"></i>
+                Anglais - Intermédiaire
+              </li>
             </ul>
           </div>
 
+          <!-- Qualités -->
           <div class="card-hover p-6 rounded-xl text-center">
-            <div
-              class="w-14 h-14 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
+            <div class="w-14 h-14 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="fas fa-star text-secondary text-xl"></i>
             </div>
             <h3 class="text-lg font-playfair mb-3">Qualités</h3>
-            <ul class="space-y-2 text-gray-400 text-sm">
-              <li>✓ Rigoureux & Autonome</li>
-              <li>✓ Travail en équipe</li>
-              <li>✓ Résolution créative</li>
+            <ul class="space-y-3 text-gray-400 text-sm text-left inline-block">
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check text-secondary/70 text-xs"></i>
+                Rigoureux & Autonome
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check text-secondary/70 text-xs"></i>
+                Travail en équipe
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check text-secondary/70 text-xs"></i>
+                Résolution créative
+              </li>
             </ul>
           </div>
 
+          <!-- Centres d'intérêt (avec FontAwesome) -->
           <div class="card-hover p-6 rounded-xl text-center">
-            <div
-              class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
+            <div class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="fas fa-heart text-accent text-xl"></i>
             </div>
-            <h3 class="text-lg font-playfair mb-3">Passions</h3>
-            <ul class="space-y-2 text-gray-400 text-sm">
-              <li>🎬 Cinéma & Tech</li>
-              <li>📚 Apprentissage continu</li>
-              <li>🚀 Innovation</li>
+            <h3 class="text-lg font-playfair mb-3">Centres d'intérêt</h3>
+            <ul class="space-y-3 text-gray-400 text-sm text-left inline-block">
+              <li class="flex items-center gap-3">
+                <i class="fas fa-microchip text-accent/70"></i>
+                Nouvelles technologies
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-book-open text-accent/70"></i>
+                Programmation & Lecture
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-futbol text-accent/70"></i>
+                Football
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Formation Section -->
+    <section id="formation" class="py-20 bg-dark">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title">Formation</h2>
+        <div class="grid md:grid-cols-2 gap-8 mt-16" id="formationContainer">
+          <!-- Formations dynamiquement générées -->
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-dark relative overflow-hidden">
+    <section id="contact" class="py-20 bg-darker relative overflow-hidden">
       <div class="absolute inset-0">
         <div
           class="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
@@ -402,7 +431,29 @@
                 </div>
                 <div>
                   <h4 class="font-semibold mb-1">Localisation</h4>
-                  <p class="text-gray-400">Canakry, Guinée 🇬🇳</p>
+                  <p class="text-gray-400">Conakry, Guinée 🇬🇳</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card-hover p-6 rounded-xl hover:bg-primary/10 transition-all duration-300"
+            >
+              <div class="flex gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fab fa-github text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">GitHub</h4>
+                  <p class="text-gray-400">
+                    <a
+                      href="https://github.com/CAMARA62133"
+                      target="_blank"
+                      >github.com/CAMARA62133</a
+                    >
+                  </p>
                 </div>
               </div>
             </div>
@@ -504,14 +555,14 @@
               <i class="fab fa-linkedin"></i>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/CAMARA62133"
               target="_blank"
               class="w-10 h-10 bg-gray-800 hover:bg-primary/20 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center text-sm transition-all duration-300"
             >
               <i class="fab fa-github"></i>
             </a>
             <a
-              href="mailto:camarakarifa69@gmail.com"
+              href="mailto:camarakarifadev@gmail.com"
               class="w-10 h-10 bg-gray-800 hover:bg-primary/20 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center text-sm transition-all duration-300"
             >
               <i class="fas fa-envelope"></i>
